@@ -1,4 +1,4 @@
 json.extract! @user, :nickname
-json.reviews @user.posts do |post|
-  json.extract! post, :mood, :text, :date
+json.posts @user.posts do |post|
+  json.extract! post, :id, :mood, :text, :date
 end
