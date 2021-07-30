@@ -24,6 +24,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 
+gem 'rest-client'
+
+gem 'dotenv-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
