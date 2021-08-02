@@ -33,10 +33,18 @@ class Api::V1::UsersController < Api::V1::BaseController
     # p params[:userinfo][:gender].to_s
     # p params[:userinfo][:avatarUrl].class
     # @user.update(wechat_name: params[:userInfo][:nickName], wechat_avatar: params[:userInfo][:avatarUrl], gender: params[:userInfo][:gender].to_s)
+    # p @user
+    # p @user.valid?
+    # p @user.errors
     @user.wechat_name = params[:userinfo][:nickName]
-    # @user.gender = params[:userInfo][:gender].to_s
-    @user.save
+    @user.nickname = params[:userinfo][:nickName]
+    @user.gender = params[:userinfo][:gender].to_s
+    @user.wechat_avatar =  params[:userinfo][:avatarUrl]
+    p @user.valid?
+    p @user.errors
     p @user
+    @user.save!
+    render json: { currentUser: @user }
   end
 
   private
