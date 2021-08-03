@@ -1,1 +1,1 @@
-json.post @post, :id, :mood, :text, :date
+json.post @post, :id, :mood, :text, :date, :created_at
