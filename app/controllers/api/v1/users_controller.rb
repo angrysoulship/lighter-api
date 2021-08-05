@@ -8,6 +8,9 @@ class Api::V1::UsersController < Api::V1::BaseController
     @users = User.all
   end
 
+  def show
+  end
+
   def find_user
     @user = User.find(params[:id])
   end
